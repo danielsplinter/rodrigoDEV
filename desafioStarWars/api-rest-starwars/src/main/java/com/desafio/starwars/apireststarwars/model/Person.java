@@ -2,17 +2,18 @@ package com.desafio.starwars.apireststarwars.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Person {
-    private String[] films;
+    private List<String> films = new ArrayList<>();
 
-    // getters e setters
-
-    public String[] getFilms() {
+    public List<String> getFilms() {
         return films;
     }
 
-    public void setFilms(String[] films) {
+    public void setFilms(List<String> films) {
         this.films = films;
     }
 }
